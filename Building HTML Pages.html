@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiCrop - Smart Agricultural Production Optimization Engine</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🌱 OptiCrop</h1>
+    <h2>Smart Agricultural Production Optimization Engine</h2>
+
+    <form action="/predict" method="POST">
+
+        <label>Nitrogen (N)</label>
+        <input type="number" name="Nitrogen" step="0.01" required>
+
+        <label>Phosphorus (P)</label>
+        <input type="number" name="Phosphorus" step="0.01" required>
+
+        <label>Potassium (K)</label>
+        <input type="number" name="Potassium" step="0.01" required>
+
+        <label>Temperature (°C)</label>
+        <input type="number" name="Temperature" step="0.01" required>
+
+        <label>Humidity (%)</label>
+        <input type="number" name="Humidity" step="0.01" required>
+
+        <label>Soil pH</label>
+        <input type="number" name="pH" step="0.01" required>
+
+        <label>Rainfall (mm)</label>
+        <input type="number" name="Rainfall" step="0.01" required>
+
+        <button type="submit">
+            Predict Best Crop
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
